@@ -7,18 +7,18 @@
   "attribute": 1644167168,
   "attribute2": 0,
   "attribute3": 1048576,
-  "conceptId": "98260",
+  "conceptId": "98261",
   "contentBadgeType": 2,
-  "contentId": "UP9000-PPSA98260_00-YOUTUBESPONSORBK",
+  "contentId": "UP9000-PPSA98261_00-YOUTUBESPONSORBK",
   "contentVersion": "01.000.215",
   "downloadDataSize": 256,
   "localizedParameters": {
     "defaultLanguage": "en-US",
     "en-US": {
-      "titleName": "SmartTube"
+      "titleName": "TubeBlock HW test"
     },
     "de-DE": {
-      "titleName": "SmartTube"
+      "titleName": "TubeBlock HW test"
     }
   },
   "masterVersion": "01.00",
@@ -29,6 +29,6 @@
   },
   "requiredSystemSoftwareVersion": "0x0000000000000000",
   "sdkVersion": "0x0000000000000000",
-  "titleId": "PPSA98260",
+  "titleId": "PPSA98261",
   "versionFileUri": ""
 }

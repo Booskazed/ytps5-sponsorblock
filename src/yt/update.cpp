@@ -48,7 +48,7 @@ namespace
 
 constexpr std::size_t kWorkerStack = 1u << 20; // 1 MiB
 constexpr int kPollMs = 250;                   // how often install() republishes progress
-constexpr char kTitleId[] = "PPSA98260";       // the app's own title ID (param.json)
+constexpr char kTitleId[] = "PPSA98261";       // the app's own title ID (param.json)
 constexpr char kAppName[] = "SmartTube";       // what the helper's notification names
 
 enum class Job : unsigned char
@@ -426,6 +426,10 @@ void set_current_version(std::string version)
 
 void check()
 {
+#ifdef TUBEBLOCK_NO_UPDATE
+    // A test build never asks the release feed: it must not replace itself.
+    return;
+#endif
     std::lock_guard<std::mutex> lock(g.mutex);
     // One job at a time, and never over a staged update.
     if (g.pending != Job::none || g.worker_busy || g.engine_live)
@@ -437,6 +441,10 @@ void check()
 
 bool install()
 {
+#ifdef TUBEBLOCK_NO_UPDATE
+    // A test build never installs anything over itself (no payload to the loader).
+    return false;
+#endif
     std::lock_guard<std::mutex> lock(g.mutex);
     if (g.pending != Job::none || g.worker_busy || g.engine_live)
         return false;

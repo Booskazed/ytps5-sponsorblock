@@ -328,7 +328,7 @@ void App::start()
         // it on the Games tab.
         std::string param;
         if (save::read_file(kParamJson, &param) && is_game_category(param))
-            update_check_set_asset_name("PPSA98260-games.zip");
+            update_check_set_asset_name("PPSA98261-games.zip");
     }
     // The SponsorBlock build checks its own release feed
     // (animatian112/ytps5-sponsorblock), never upstream's.

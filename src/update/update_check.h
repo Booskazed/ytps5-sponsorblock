@@ -49,7 +49,7 @@ extern "C"
 /* GitHub's own limit for a release body; more is cut, never kept. */
 #define UPDATE_CHECK_NOTES_MAX 2000u
 /* The asset every release of this title must carry. */
-#define UPDATE_CHECK_ASSET_NAME "PPSA98260.zip"
+#define UPDATE_CHECK_ASSET_NAME "PPSA98261.zip"
 #define UPDATE_CHECK_MAX_RESPONSE 65536u
 
     /* What the whole check can say; 0 is success, everything else is why there is none. */

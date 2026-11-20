@@ -7,7 +7,8 @@ SHELL := /bin/bash
 
 -include .env
 
-APP_DEFINITIONS ?=
+# Test build: no update check and no self-update (see src/yt/update.cpp).
+APP_DEFINITIONS ?= TUBEBLOCK_NO_UPDATE=1
 APP_INCLUDE_PATHS ?=
 APP_STATIC_ARCHIVES ?=
 APP_IMPORT_STUBS ?= tooling/stubs/libSceVideodec2.so
